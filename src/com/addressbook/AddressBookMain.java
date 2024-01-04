@@ -20,7 +20,7 @@ public class AddressBookMain {
             System.out.println("Enter your choice:");
 
             int option = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character after reading the int
+            scanner.nextLine();
 
             switch (option) {
                 case 1:
@@ -37,7 +37,33 @@ public class AddressBookMain {
 
                     if (selectedAddressBook != null) {
                         System.out.println("Enter details for a new contact:");
-                        // Similar code for adding contacts as previously shown
+                        System.out.println("Enter first name:");
+                        String firstName = scanner.nextLine();
+
+                        System.out.println("Enter last name:");
+                        String lastName = scanner.nextLine();
+
+                        System.out.println("Enter address:");
+                        String address = scanner.nextLine();
+
+                        System.out.println("Enter city:");
+                        String city = scanner.nextLine();
+
+                        System.out.println("Enter state:");
+                        String state = scanner.nextLine();
+
+                        System.out.println("Enter zip code:");
+                        String zipCode = scanner.nextLine();
+
+                        System.out.println("Enter phone number:");
+                        String phoneNumber = scanner.nextLine();
+
+                        System.out.println("Enter email:");
+                        String email = scanner.nextLine();
+
+                        Contact newContact = new Contact(firstName, lastName, address, city, state, zipCode, phoneNumber, email);
+                        selectedAddressBook.addContact(newContact);
+
                     } else {
                         System.out.println("Address Book not found.");
                     }

@@ -19,7 +19,9 @@ class AddressBook {
         System.out.println("All contacts in the address book:");
         for (Contact contact : contacts) {
             System.out.println(contact.getFirstName() + " " + contact.getLastName());
-            // Display other details as needed
+            System.out.println(contact.getAddress() + " " + contact.getCity());
+            System.out.println(contact.getState() + " " + contact.getZipCode());
+            System.out.println(contact.getPhoneNumber() + " " + contact.getEmail());
         }
     }
 
